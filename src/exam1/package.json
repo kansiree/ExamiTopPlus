@@ -1,0 +1,50 @@
+{
+    "name": "scrubengine",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "set dev=true & nodemon server.js -L",
+        "init": "node initsystem.js",
+        "test": "jest",
+        "eslint": "eslint -c .eslintrc.js --fix --ext .js ."
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/jest": "^25.2.2",
+        "eslint": "^7.0.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-config-standard": "^14.1.1",
+        "eslint-plugin-html": "^6.0.2",
+        "eslint-plugin-import": "*",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "*",
+        "eslint-plugin-promise": "*",
+        "eslint-plugin-standard": "*",
+        "jest": "^26.0.1",
+        "prettier": "^2.0.5",
+        "prettier-eslint": "^9.0.1"
+    },
+    "nodemonConfig": {
+        "ignore": [
+            "storaged/*"
+        ]
+    },
+    "jest": {
+        "bail": false,
+        "verbose": false,
+        "clearMocks": true,
+        "globals": {
+            "_TEST": true
+        },
+        "testPathIgnorePatterns": [
+            "/node_modules/",
+            "/yaml",
+            "/static",
+            "/.vscode"
+        ]
+    }
+}
